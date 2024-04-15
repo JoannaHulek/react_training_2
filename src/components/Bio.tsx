@@ -1,9 +1,10 @@
+import image from "./images/IMG_20240221_073450.jpg"
 function AboutMe(){
     return(
         <div className="card mb-3">
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src="..." className="img-fluid rounded-start" alt="..."/>
+                    <img src={image} className="img-fluid rounded-start" alt="pink image" />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
