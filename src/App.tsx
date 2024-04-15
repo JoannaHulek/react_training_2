@@ -5,6 +5,8 @@ import Button from "./components/Button";
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/Bio";
 import Message from "./components/Message";
+import Table from "./components/Table";
+import listContent from "./components/content/ListContent.json"
 
 function App(){
   const [alertVisable, setAlertVisable] = useState(false)
@@ -12,24 +14,25 @@ function App(){
   return (<div>
     {Navbar()}
     {Message()}
-    {alertVisable && <Alert onClose={()=>setAlertVisable(false)}>I TOLD YOU!</Alert>}
-    <Button color='secondary' onClick={()=>setAlertVisable(true)}>DO NOT CLICK ME!</Button>
+    {alertVisable && <Alert onClose={() => setAlertVisable(false)}>I TOLD YOU!</Alert>}
+    <Button color='secondary' onClick={() => setAlertVisable(true)}>DO NOT CLICK ME!</Button>
     {renderList()}
     <section id="bio">{AboutMe()}</section>
+    <section id="resume">{Table()}</section>
+
   </div>)
 }
 
 function renderList() {
-  let items = ['Tenczynek', 'Kaków', 'Nowy Jork']
 
   const handleSelectItem = (item: string) => {
     console.log(item)
   }
-
+  
   return <div>
-    <ListGroup items={items} heading='Cities' onSelectItem={handleSelectItem}/>
-    <ListGroup items={['red', 'green', 'blue']} heading='Colors' onSelectItem={handleSelectItem}/>
-    <ListGroup items={[]} heading='empty lis' onSelectItem={handleSelectItem}/>
+    <ListGroup items={listContent.Cities} heading='Cities' onSelectItem={handleSelectItem}/>
+    <ListGroup items={listContent.Colors} heading='Colors' onSelectItem={handleSelectItem}/>
+    <ListGroup items={[]} heading='empty list' onSelectItem={handleSelectItem}/>
   </div>
 }
 
