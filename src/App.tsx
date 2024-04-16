@@ -8,6 +8,9 @@ import AboutMe from "./components/Bio";
 import Message from "./components/Message";
 import Table from "./components/Table";
 import listContent from "./components/content/ListContent.json"
+import tableContent from "./components/content/TableContent.json"
+
+
 
 function App(){
   const [alertVisable, setAlertVisable] = useState(false)
@@ -20,7 +23,7 @@ function App(){
     <Button color='secondary' onClick={() => setAlertVisable(true)}>DO NOT CLICK ME!</Button>
     {renderList()}
     <section id="bio">{AboutMe()}</section>
-    <section id="resume">{Table()}</section>
+    <section id="resume"><Table items={tableContent.Col} /></section>
     </div>
   </div>)
 }
