@@ -1,3 +1,4 @@
+import './App.css';
 import {useState} from "react";
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
@@ -13,13 +14,14 @@ function App(){
 
   return (<div>
     {Navbar()}
+    <div className="content">
     {Message()}
     {alertVisable && <Alert onClose={() => setAlertVisable(false)}>I TOLD YOU!</Alert>}
     <Button color='secondary' onClick={() => setAlertVisable(true)}>DO NOT CLICK ME!</Button>
     {renderList()}
     <section id="bio">{AboutMe()}</section>
     <section id="resume">{Table()}</section>
-
+    </div>
   </div>)
 }
 
