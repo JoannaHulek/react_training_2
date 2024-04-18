@@ -9,6 +9,7 @@ import Message from "./components/Message";
 import Table from "./components/Table";
 import listContent from "./components/content/ListContent.json"
 import tableContent from "./components/content/TableContent.json"
+import Footer from "./components/Footer";
 
 
 
@@ -24,7 +25,9 @@ function App(){
     {renderList()}
     <section id="bio">{AboutMe()}</section>
     <section id="resume"><Table items={tableContent.Col} /></section>
+
     </div>
+    {Footer()}
   </div>)
 }
 

@@ -1,4 +1,5 @@
 .content {
+  position: relative;
   margin: 20px;
   padding: 20px;
 }
@@ -12,6 +13,23 @@ section{
   border: none;
   outline: none;
 }
+
+footer {
+  bottom: 0;
+  width: 100%;
+}
+
+a {
+  color: purple;
+  text-decoration: none;
+}
+a:hover {
+  color: plum;
+}
+a:visited {
+  color: purple;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
 
