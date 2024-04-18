@@ -29,7 +29,7 @@ function Navbar(){
 
 function TogglerNav (){
     return(
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg border-bottom">
             <div className="container-fluid">
                 <button className="navbar-toggler" type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" ></span>
