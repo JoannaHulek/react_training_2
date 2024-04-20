@@ -10,6 +10,7 @@ import Table from "./components/Table";
 import listContent from "./components/content/ListContent.json"
 import tableContent from "./components/content/TableContent.json"
 import Footer from "./components/Footer";
+import ImageDecoration from "./components/ImageDecoration";
 
 
 
@@ -19,12 +20,13 @@ function App(){
   return (<div>
     {Navbar()}
     <div className="content">
-    {Message()}
-    {alertVisable && <Alert onClose={() => setAlertVisable(false)}>I TOLD YOU!</Alert>}
-    <Button color='secondary' onClick={() => setAlertVisable(true)}>DO NOT CLICK ME!</Button>
-    {renderList()}
-    <section id="bio">{AboutMe()}</section>
-    <section id="resume"><Table items={tableContent.Col} /></section>
+      {Message()}
+      {alertVisable && <Alert onClose={() => setAlertVisable(false)}>I TOLD YOU!</Alert>}
+      <Button color='secondary' onClick={() => setAlertVisable(true)}>DO NOT CLICK ME!</Button>
+      {renderList()}
+      <section id="bio">{AboutMe()}</section>
+      <section id="resume"><Table items={tableContent.Col}/></section>
+      {ImageDecoration()}
 
     </div>
     {Footer()}

@@ -30,6 +30,14 @@ a:visited {
   color: purple;
 }
 
+div.border-decoration {
+  position: absolute;
+  border: solid 2em rgba(0, 0, 0, 0.2);
+  background: url("https://www.joannadzierzbicka.pl/img/portfolio/8.png") 50% / cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
 
