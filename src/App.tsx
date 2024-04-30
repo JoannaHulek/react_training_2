@@ -11,7 +11,7 @@ import listContent from "./components/content/ListContent.json"
 import tableContent from "./components/content/TableContent.json"
 import Footer from "./components/Footer";
 import ImageDecoration from "./components/ImageDecoration";
-
+import HelloComponent from './components/Hello';
 
 
 function App(){
@@ -20,6 +20,11 @@ function App(){
   return (<div>
     {Navbar()}
     <div className="content">
+      <h1>V tutaj jest mój komponent</h1>
+      <code>{HelloComponent()}</code>
+      <h1>^ jeśli go nie widzisz, to nie działa...</h1>
+      <h2>A jeśli widzisz i wygląda dziwnie, to też nie działa ;-) </h2>
+      <br></br><hr></hr>
       {Message()}
       {alertVisable && <Alert onClose={() => setAlertVisable(false)}>I TOLD YOU!</Alert>}
       <Button color='secondary' onClick={() => setAlertVisable(true)}>DO NOT CLICK ME!</Button>
